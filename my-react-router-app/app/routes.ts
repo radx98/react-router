@@ -1,13 +1,6 @@
-import type { RouteConfig } from "@react-router/dev/routes";
-import { index, layout, route } from "@react-router/dev/routes";
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
 export default [
-    layout("layouts/sidebar.tsx", [
-        index("routes/home.tsx"),
-        route("contacts/:contactId", "routes/contact.tsx"),
-    ]),
-    route("about", "routes/about.tsx"),
-    route("login", "routes/login.tsx"),
-    route("/api/auth/*", "routes/auth-routes.ts"),
-
+    index("routes/home.tsx"),
+    route("api/auth/*", "routes/better-auth-routes.ts")
 ] satisfies RouteConfig;
