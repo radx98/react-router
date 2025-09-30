@@ -7,5 +7,7 @@ export default [
         route("contacts/:contactId", "routes/contact.tsx"),
     ]),
     route("about", "routes/about.tsx"),
-    route("auth", "routes/auth.tsx")
+    route("login", "routes/login.tsx"),
+    route("/api/auth/*", "routes/auth-routes.ts"),
+
 ] satisfies RouteConfig;
