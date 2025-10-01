@@ -9,7 +9,7 @@ export const auth = betterAuth({
         requireEmailVerification: false,
     },
     database: drizzleAdapter(db, {
-        provider: "pg", // or "pg" or "mysql"
+        provider: "pg",
         schema: schema,
     }),
 })
