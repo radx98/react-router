@@ -54,8 +54,8 @@ export function Login() {
   const signIn = async () => {
     await authClient.signIn.email(
       {
-        email,
-        password,
+        email: emailIn,
+        password: passwordIn,
       },
       {
         onRequest: (ctx) => {
