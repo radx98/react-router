@@ -72,7 +72,7 @@ export function Login() {
   }
 
   return (
-    <>
+    <div className="flex flex-col">
       <div className='border-2 border-solid border-gray-300 rounded-3xl px-6 py-4'>
         <h1 className='mb-6 mt-3 font-semibold'>
           Sign Up
@@ -106,7 +106,7 @@ export function Login() {
         </Form>
       </div>
 
-      <h3 className='my-8'>or</h3>
+      <h3 className='my-8 text-center'>or</h3>
 
       <div className='border-2 border-solid border-gray-300 rounded-3xl px-6 py-4'>
         <h1 className='mb-6 mt-3 font-semibold'>
@@ -134,6 +134,6 @@ export function Login() {
           </button>
         </Form>
       </div>
-    </>
+    </div>
   )
 }
