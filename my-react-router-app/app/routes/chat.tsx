@@ -9,8 +9,11 @@ export default function Chat() {
   return (
     <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
       {messages.map(message => (
-        <div key={message.id} className="whitespace-pre-wrap">
-          {message.role === 'user' ? 'User: ' : 'AI: '}
+        <div key={message.id} className={message.role === "user" ?
+            "whitespace-pre-wrap bg-sky-800 text-sky-100 rounded-t-3xl rounded-bl-3xl rounded-br-lg p-3 mb-6 self-end" :
+            "whitespace-pre-wrap bg-sky-100 text-sky-800 rounded-t-3xl rounded-br-3xl rounded-bl-lg p-3 mb-6 self-start max-w-96"
+        }>
+          {/* {message.role === 'user' ? 'User: ' : 'AI: '} */}
           {message.parts.map((part, i) => {
             switch (part.type) {
               case 'text':
@@ -28,7 +31,7 @@ export default function Chat() {
         }}
       >
         <input
-          className="fixed dark:bg-zinc-900 bottom-0 w-full max-w-md p-2 mb-8 border border-zinc-300 dark:border-zinc-800 rounded shadow-xl"
+          className="fixed dark:bg-zinc-900 bottom-0 w-full max-w-md py-3 px-4 mb-8 border border-zinc-300 dark:border-zinc-800 rounded-full shadow-xl bg-white"
           value={input}
           placeholder="Say something..."
           onChange={e => setInput(e.currentTarget.value)}
