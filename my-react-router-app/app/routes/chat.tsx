@@ -7,7 +7,7 @@ export default function Chat() {
   const [input, setInput] = useState('');
   const { messages, sendMessage } = useChat();
   return (
-    <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
+    <div className="flex flex-col w-full justify-center max-w-md py-24 mx-auto stretch">
       {messages.map(message => (
         <div key={message.id} className={message.role === "user" ?
             "whitespace-pre-wrap bg-sky-800 text-sky-100 rounded-t-3xl rounded-bl-3xl rounded-br-lg p-3 mb-6 self-end" :
