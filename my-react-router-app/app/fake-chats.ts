@@ -1,0 +1,5 @@
+export const chats = {
+    1: [{ "parts": [{ "type": "text", "text": "hi" }], "id": "bRrwdz5pfopv2U77", "role": "user" }, { "id": "bgTUFrhxPqlXLlAh", "role": "assistant", "parts": [{ "type": "step-start" }, { "type": "text", "text": "Hello! Arrr I'm a pirate!", "providerMetadata": { "openai": { "itemId": "msg_014e9b032f9a8c8e0068deee9e9ea0819da8bf5481df8dab6c" } }, "state": "done" }] }],
+    2: [{ "parts": [{ "type": "text", "text": "hello guys2" }], "id": "bRrwdz5pfopv2U77", "role": "user" }, { "id": "bgTUFrhxPqlXLlAh", "role": "assistant", "parts": [{ "type": "step-start" }, { "type": "text", "text": "Hello! How can I assist you today?", "providerMetadata": { "openai": { "itemId": "msg_014e9b032f9a8c8e0068deee9e9ea0819da8bf5481df8dab6c" } }, "state": "done" }] }],
+    3: [{ "parts": [{ "type": "text", "text": "hello guys3" }], "id": "bRrwdz5pfopv2U77", "role": "user" }, { "id": "bgTUFrhxPqlXLlAh", "role": "assistant", "parts": [{ "type": "step-start" }, { "type": "text", "text": "Hello! How can I assist you today?", "providerMetadata": { "openai": { "itemId": "msg_014e9b032f9a8c8e0068deee9e9ea0819da8bf5481df8dab6c" } }, "state": "done" }] }],
+}

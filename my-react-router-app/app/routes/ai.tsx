@@ -10,6 +10,7 @@ export async function action({ request }: Route.ActionArgs) {
     const { messages }: { messages: UIMessage[] } = await request.json()
     const result = streamText({
         model: openai("gpt-4.1-mini"),
+        system: 'You are a pirate. Talk like a pirate.', //placeholder
         messages: convertToModelMessages(messages)
     })
     return result.toUIMessageStreamResponse()
