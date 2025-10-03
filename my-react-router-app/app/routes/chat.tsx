@@ -20,11 +20,18 @@ function ActualChat() {
     return (
         <div className="flex flex-col w-full justify-center max-w-md py-24 mx-auto stretch">
             {/* <div>{JSON.stringify(messages)}</div> */}
+            {JSON.stringify(messages) === JSON.stringify([]) ?
+            <div className='flex justify-center'>
+                <div className='w-40 bg-gray-100 text-gray-500 py-3 px-4 mt-35 rounded-3xl text-center'>
+                    <h3>Add a new idea</h3>
+                    <p className='text-xs'>Something you want to stick with you</p>
+                </div>
+            </div> : null}
             {messages.map(message => (
                 <div key={message.id} className={message.role === "user" ?
-                    "whitespace-pre-wrap bg-sky-800 text-sky-100 rounded-t-3xl rounded-bl-3xl rounded-br-lg p-3 mb-6 self-end" :
-                    "whitespace-pre-wrap bg-sky-100 text-sky-800 rounded-t-3xl rounded-br-3xl rounded-bl-lg p-3 mb-6 self-start max-w-96"
-                }>
+                        "whitespace-pre-wrap bg-sky-800 text-sky-100 rounded-t-3xl rounded-bl-3xl rounded-br-lg p-3 mb-6 self-end" :
+                        "whitespace-pre-wrap bg-sky-100 text-sky-800 rounded-t-3xl rounded-br-3xl rounded-bl-lg p-3 mb-6 self-start max-w-96"
+                    }>
                     {/* {message.role === 'user' ? 'User: ' : 'AI: '} */}
                     {message.parts.map((part, i) => {
                         switch (part.type) {
